@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to external javaScript -->
+    <script src="assets/javascript/app.js" type="text/javascript"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel"
+      rel="stylesheet"
+    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Trivia Game</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <br /><br />
+
+      <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10 trivBox">
+          <br />
+
+          <h1 class="trivBoxHead">Fùtbol Trivia</h1>
+
+          <br /><br />
+
+          <button
+            id="startGame"
+            class="btn btn-primary btn-lg btn-block"
+            type="submit"
+          >
+            Start
+          </button>
+
+          <div class="hideGame">
+            <div id="visibleGame">
+              <div id="timer">Time Remaining: 30</div>
+              <br />
+              <p>
+                Which of these players has never played for Manchester United?
+              </p>
+              <form>
+                <input type="radio" name="answer" value="wrong" /> Eric Cantona
+                <br />
+                <input type="radio" name="answer" value="right" id="correct1" />
+                Bobby Moore <br />
+                <input type="radio" name="answer" value="wrong" /> Ryan Giggs<br />
+                <input type="radio" name="answer" value="wrong" /> Bobby
+                Charlton<br />
+              </form>
+              <br />
+              <p>
+                Which of these teams is not playing in the the EPL in the
+                2009-2010 season?
+              </p>
+              <form>
+                <input type="radio" name="answer" value="wrong" /> Birmingham
+                City <br />
+                <input type="radio" name="answer" value="wrong" /> Burnley FC
+                <br />
+                <input type="radio" name="answer" value="wrong" /> Wigan
+                Athletic <br />
+                <input type="radio" name="answer" value="right" id="correct2" />
+                Newcastle United <br />
+              </form>
+              <br />
+              <p>Who won the 1994 FIFA World Cup?</p>
+              <form>
+                <input type="radio" name="answer" value="wrong" /> Argentina
+                <br />
+                <input type="radio" name="answer" value="right" id="correct3" />
+                Brazil <br />
+                <input type="radio" name="answer" value="wrong" /> Germany
+                <br />
+                <input type="radio" name="answer" value="wrong" /> France <br />
+              </form>
+              <br />
+              <p>
+                According to the official FIFA rulebook, how long can a
+                goalkeeper hold onto the ball for?
+              </p>
+              <form>
+                <input type="radio" name="answer" value="right" id="correct4" />
+                5 Seconds <br />
+                <input type="radio" name="answer" value="wrong" /> 3 Seconds
+                <br />
+                <input type="radio" name="answer" value="wrong" /> 10 Seconds
+                <br />
+                <input type="radio" name="answer" value="wrong" /> 6 Seconds
+                <br />
+              </form>
+              <br />
+              <p>
+                Why did the Indian national team withdraw from the FIFA World
+                Cup competition in 1950?
+              </p>
+              <form>
+                <input type="radio" name="answer" value="wrong" /> As a
+                political protest <br />
+                <input type="radio" name="answer" value="wrong" /> Because they
+                did not have enough players to field a full squad <br />
+                <input type="radio" name="answer" value="wrong" /> Because
+                turbans were not allowed. <br />
+                <input type="radio" name="answer" value="right" id="correct5" />
+                Because they could not play barefoot <br />
+              </form>
+              <br />
+              <p>In the MLS in what city does the team Chivas USA play?</p>
+              <form>
+                <input type="radio" name="answer" value="wrong" /> Buffalo, New
+                York <br />
+                <input type="radio" name="answer" value="right" id="correct6" />
+                Carson, California <br />
+                <input type="radio" name="answer" value="wrong" /> Baltimore,
+                Maryland <br />
+                <input type="radio" name="answer" value="wrong" /> Miami,
+                Florida <br />
+              </form>
+              <br />
+              <p>
+                Back in the Mls, who is the all time leading goal scorer in the
+                league?
+              </p>
+              <form>
+                <input type="radio" name="answer" value="wrong" /> Landon
+                Donovan <br />
+                <input type="radio" name="answer" value="wrong" /> Preki <br />
+                <input type="radio" name="answer" value="wrong" /> Carlos Ruiz
+                <br />
+                <input type="radio" name="answer" value="right" id="correct7" />
+                Jaime Moreno <br />
+              </form>
+              <br />
+              <p>
+                What are the home colors of the FC Barcelona soccer uniform?
+              </p>
+              <form>
+                <input type="radio" name="answer" value="wrong" /> Orange and
+                White <br />
+                <input type="radio" name="answer" value="right" id="correct8" />
+                Blue and Red<br />
+                <input type="radio" name="answer" value="wrong" /> Black and
+                White <br />
+                <input type="radio" name="answer" value="wrong" /> Yellow and
+                Blue <br />
+              </form>
+              <br /><br />
+              <button
+                id="doneGame"
+                class="btn btn-primary btn-lg btn-block"
+                type="submit"
+              >
+                Done
+              </button>
+            </div>
+
+            <div id="visibleEndGame">
+              <h1 class="allDone">All Done!</h1>
+              <br />
+              <h1>Correct</h1>
+              <h2 id="correct"></h2>
+              <h1>Incorrect</h1>
+              <h2 id="incorrect"></h2>
+            </div>
+          </div>
+
+          <br /><br /><br /><br />
+        </div>
+        <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/ChampionsLeague?ref_src=twsrc%5Etfw">Tweets by ChampionsLeague</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        
+        <div class="col-md-1"></div>
+      </div>
+      <br /><br />
+    </div>
+  </body>
+</html>
